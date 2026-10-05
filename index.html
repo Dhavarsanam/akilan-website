@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akilan — Advocate &amp; Legal Counsel, Chennai</title>
+  <meta name="description" content="Akilan — Advocate practising before the High Court of Madras and subordinate courts in civil, criminal, family, property and commercial matters.">
+  <meta name="theme-color" content="#08090c">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2308090c'/%3E%3Ctext x='50' y='66' font-family='Georgia,serif' font-size='46' text-anchor='middle' fill='%23d4ae62'%3EAK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&family=Noto+Serif+Tamil:wght@400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__panel preloader__panel--top"></div>
+    <div class="preloader__panel preloader__panel--bottom"></div>
+    <div class="preloader__inner">
+      <svg class="preloader__scales" viewBox="0 0 100 100" fill="none">
+        <path pathLength="1" d="M50 14 V84"/>
+        <path pathLength="1" d="M32 86 H68"/>
+        <path pathLength="1" d="M16 26 H84"/>
+        <path pathLength="1" d="M16 26 L6 54 M16 26 L26 54"/>
+        <path pathLength="1" d="M84 26 L74 54 M84 26 L94 54"/>
+        <path pathLength="1" d="M4 54 Q16 68 28 54 Z"/>
+        <path pathLength="1" d="M72 54 Q84 68 96 54 Z"/>
+        <circle pathLength="1" cx="50" cy="11" r="3.5"/>
+      </svg>
+      <div class="preloader__name">AKILAN</div>
+      <div class="preloader__bar"><span id="loadBar"></span></div>
+      <div class="preloader__count"><span id="loadCount">0</span><sup>%</sup></div>
+    </div>
+  </div>
+
+  <!-- ============ BCI DISCLAIMER ============ -->
+  <div class="disclaimer" id="disclaimer" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitle" hidden>
+    <div class="disclaimer__card">
+      <div class="disclaimer__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v18M7 21h10M4 7h16M4 7l-2.5 6a3 3 0 0 0 5 0L4 7zm16 0l-2.5 6a3 3 0 0 0 5 0L20 7z"/></svg>
+      </div>
+      <h2 id="disclaimerTitle">Disclaimer</h2>
+      <p>As per the rules of the <strong>Bar Council of India</strong>, advocates are not permitted to solicit work or advertise. By clicking <em>“I Agree”</em>, you acknowledge that:</p>
+      <ul>
+        <li>You are seeking information about Akilan of your own accord.</li>
+        <li>There has been no advertisement, solicitation, invitation or inducement of any sort.</li>
+        <li>The content of this website is for information only, is not legal advice, and does not create an advocate–client relationship.</li>
+      </ul>
+      <div class="disclaimer__actions">
+        <button class="btn btn--primary" id="disclaimerAgree"><span>I Agree</span></button>
+        <button class="btn btn--ghost" id="disclaimerLeave"><span>Leave Site</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ CURSOR / PROGRESS ============ -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span class="cursor-ring__label"></span></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo" aria-label="Akilan — home">
+        <span class="logo__mark">AK</span>
+        <span class="logo__text">
+          <strong>Akilan</strong>
+          <small>Advocate &amp; Legal Counsel</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#practice" class="nav__link">Practice</a>
+        <a href="#process" class="nav__link">Approach</a>
+        <a href="#journey" class="nav__link">Journey</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+      </nav>
+      <a href="#contact" class="btn btn--primary btn--sm header__cta magnetic"><span>Consultation</span></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav>
+      <a href="#about"><i>01</i>About</a>
+      <a href="#practice"><i>02</i>Practice Areas</a>
+      <a href="#process"><i>03</i>Approach</a>
+      <a href="#journey"><i>04</i>Journey</a>
+      <a href="#faq"><i>05</i>FAQ</a>
+      <a href="#contact"><i>06</i>Contact</a>
+    </nav>
+    <p class="mobile-menu__foot">High Court of Madras · Chennai</p>
+  </div>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <canvas id="hero3d" class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="hero__visual">
+        <div class="hero__frame tilt" data-tilt data-tilt-max="6">
+          <span class="hero__arch-outline" aria-hidden="true"></span>
+          <div class="hero__arch">
+            <!-- Photo: Unsplash (free licence) https://unsplash.com/photos/lady-justice-statue-with-scales-and-sword-yCdPU73kGSc
+                 Tip: save it as images/lady-justice.jpg and point src there for offline use. -->
+            <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=1400&q=80&auto=format&fit=crop"
+                 alt="Bronze statue of Lady Justice, blindfolded, holding the scales of justice aloft" fetchpriority="high">
+            <span class="hero__arch-shine" aria-hidden="true"></span>
+          </div>
+          <div class="hero__chip layer" lang="ta">
+            <span>வாய்மையே வெல்லும்</span>
+            <small>Truth alone triumphs</small>
+          </div>
+        <div class="hero__badge" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="circlePath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+            <text><textPath href="#circlePath">TRUTH · INTEGRITY · JUSTICE · DILIGENCE · </textPath></text>
+          </svg>
+          <span class="hero__badge-core">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3v18M7 21h10M4 7h16M4 7l-2.5 6a3 3 0 0 0 5 0L4 7zm16 0l-2.5 6a3 3 0 0 0 5 0L20 7z"/></svg>
+          </span>
+        </div>
+        </div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow"><span class="eyebrow__line"></span>Advocate · High Court of Madras</p>
+          <h1 class="hero__title">
+            <span class="line"><span>Justice,</span></span>
+            <span class="line"><span><em class="gold-text">argued</em> with</span></span>
+            <span class="line"><span>conviction.</span></span>
+          </h1>
+          <p class="hero__lead">Considered counsel and fearless courtroom advocacy in civil, criminal, family and commercial matters — grounded in preparation, guided by integrity.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary magnetic" data-cursor="Book"><span>Book a Consultation</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#practice" class="btn btn--ghost magnetic"><span>Areas of Practice</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero__meta">
+        <div><span>Enrolled</span><strong>Bar Council of Tamil Nadu &amp; Puducherry</strong></div>
+        <div><span>Chambers</span><strong>Chennai, Tamil Nadu</strong></div>
+        <div><span>Languages</span><strong>Tamil · English</strong></div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to about"><span>Scroll</span><i></i></a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Civil Litigation</span><b>✦</b><span>Criminal Defence</span><b>✦</b><span>Family &amp; Matrimonial</span><b>✦</b><span>Property Disputes</span><b>✦</b><span>Writ Petitions</span><b>✦</b><span>Corporate &amp; Commercial</span><b>✦</b><span>Cheque Bounce</span><b>✦</b><span>Consumer Protection</span><b>✦</b>
+        <span>Civil Litigation</span><b>✦</b><span>Criminal Defence</span><b>✦</b><span>Family &amp; Matrimonial</span><b>✦</b><span>Property Disputes</span><b>✦</b><span>Writ Petitions</span><b>✦</b><span>Corporate &amp; Commercial</span><b>✦</b><span>Cheque Bounce</span><b>✦</b><span>Consumer Protection</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__visual reveal">
+          <div class="portrait tilt" data-tilt data-tilt-max="10">
+            <div class="portrait__frame">
+              <div class="portrait__img">
+                <span class="portrait__mono" aria-hidden="true">AK</span>
+                <span class="portrait__halo" aria-hidden="true"></span>
+                <picture>
+                  <source srcset="images/akilan.webp" type="image/webp">
+                  <img class="portrait__photo" src="images/akilan.png" alt="Akilan" width="853" height="965" loading="lazy">
+                </picture>
+              </div>
+              <div class="portrait__shine"></div>
+            </div>
+            <div class="portrait__tag layer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 15.4 6.7 18.4l1.2-6L3.4 8.3l6-.7z"/></svg>
+              Practising since 2012
+            </div>
+            <div class="portrait__exp layer">
+              <strong><span data-count="12">0</span>+</strong>
+              <span>Years at<br>the Bar</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow reveal"><span class="eyebrow__line"></span>About the Advocate</p>
+          <h2 class="section-title" data-split>A counsel who <em>listens</em> first — and argues hardest.</h2>
+          <p class="reveal">Akilan is an advocate practising before the High Court of Madras and the civil and criminal courts of Tamil Nadu. His practice is built on a simple belief: every client deserves to understand their case, their options and the road ahead — in plain language.</p>
+          <p class="reveal">From drafting pleadings with surgical precision to conducting rigorous cross-examination, he brings the same discipline to every matter, whether it is an individual's property dispute or a company's commercial claim.</p>
+          <ul class="creds">
+            <li class="reveal"><span>B.A., LL.B. (Hons.)</span><small>Degree in Law</small></li>
+            <li class="reveal"><span>Bar Council of TN &amp; Puducherry</span><small>Enrolled Advocate</small></li>
+            <li class="reveal"><span>Madras High Court</span><small>Advocates' Association Member</small></li>
+          </ul>
+          <div class="signature reveal">
+            <span class="signature__text">Akilan</span>
+            <span class="signature__role">Advocate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat reveal"><strong><span data-count="12">0</span>+</strong><span>Years of Practice</span></div>
+        <div class="stat reveal" style="--d:.1s"><strong><span data-count="1500">0</span>+</strong><span>Matters Handled</span></div>
+        <div class="stat reveal" style="--d:.2s"><strong><span data-count="20">0</span>+</strong><span>Courts &amp; Tribunals</span></div>
+        <div class="stat reveal" style="--d:.3s"><strong><span data-count="100">0</span>%</strong><span>Confidentiality</span></div>
+      </div>
+    </section>
+
+    <!-- ============ PRACTICE AREAS ============ -->
+    <section class="section practice" id="practice">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal"><span class="eyebrow__line"></span>Areas of Practice</p>
+          <h2 class="section-title" data-split>Expertise across the <em>full spectrum</em> of law.</h2>
+          <p class="section-head__lead reveal">Every matter is personally handled — researched, drafted and argued with the attention it deserves.</p>
+        </div>
+
+        <div class="practice__grid" id="practiceGrid">
+          <article class="card tilt reveal" data-tilt>
+            <span class="card__num">01</span>
+            <div class="card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 20l10-10 8 8-10 10z"/><path d="M19 15l8 8M28 14l6 6M10 24l6 6M22 26l14 14"/><path d="M6 42h20"/></svg></div>
+            <h3>Civil Litigation</h3>
+            <p>Suits for recovery, injunctions, specific performance, declarations and appeals — from trial court to High Court.</p>
+            <ul class="card__tags"><li>Recovery Suits</li><li>Injunctions</li><li>Appeals</li></ul>
+            <span class="card__glare"></span>
+          </article>
+
+          <article class="card tilt reveal" data-tilt style="--d:.08s">
+            <span class="card__num">02</span>
+            <div class="card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M24 5l15 6v11c0 10-6.5 17-15 21-8.5-4-15-11-15-21V11z"/><path d="M17 24l5 5 9-10"/></svg></div>
+            <h3>Criminal Defence</h3>
+            <p>Bail and anticipatory bail, quashing petitions, trials and criminal appeals with a rigorous, rights-first defence.</p>
+            <ul class="card__tags"><li>Bail</li><li>Quash Petitions</li><li>Trials</li></ul>
+            <span class="card__glare"></span>
+          </article>
+
+          <article class="card tilt reveal" data-tilt style="--d:.16s">
+            <span class="card__num">03</span>
+            <div class="card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="17" cy="14" r="5"/><circle cx="32" cy="14" r="5"/><path d="M7 38c0-8 4.5-13 10-13s10 5 10 13M22 38c0-8 4.5-13 10-13s9 5 9 13"/></svg></div>
+            <h3>Family &amp; Matrimonial</h3>
+            <p>Divorce, maintenance, child custody, domestic violence and guardianship — handled with discretion and empathy.</p>
+            <ul class="card__tags"><li>Divorce</li><li>Custody</li><li>Maintenance</li></ul>
+            <span class="card__glare"></span>
+          </article>
+
+          <article class="card tilt reveal" data-tilt>
+            <span class="card__num">04</span>
+            <div class="card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 22L24 7l18 15"/><path d="M11 18v22h26V18"/><path d="M20 40V28h8v12"/></svg></div>
+            <h3>Property &amp; Real Estate</h3>
+            <p>Title verification, partition suits, land disputes, registration matters and landlord–tenant litigation.</p>
+            <ul class="card__tags"><li>Title Search</li><li>Partition</li><li>Tenancy</li></ul>
+            <span class="card__glare"></span>
+          </article>
+
+          <article class="card tilt reveal" data-tilt style="--d:.08s">
+            <span class="card__num">05</span>
+            <div class="card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="6" y="14" width="36" height="26" rx="3"/><path d="M17 14V9h14v5M6 25h36M22 25v4h4v-4"/></svg></div>
+            <h3>Corporate &amp; Commercial</h3>
+            <p>Contracts, commercial disputes, arbitration and advisory for businesses, startups and partnerships.</p>
+            <ul class="card__tags"><li>Contracts</li><li>Arbitration</li><li>Advisory</li></ul>
+            <span class="card__glare"></span>
+          </article>
+
+          <article class="card tilt reveal" data-tilt style="--d:.16s">
+            <span class="card__num">06</span>
+            <div class="card__icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 5h18l8 8v30H12z"/><path d="M30 5v8h8M18 22h14M18 29h14M18 36h8"/></svg></div>
+            <h3>Writs &amp; Consumer Matters</h3>
+            <p>Writ petitions before the High Court, cheque bounce cases under Sec. 138 NI Act and consumer complaints.</p>
+            <ul class="card__tags"><li>Writs</li><li>Sec. 138 NI Act</li><li>Consumer</li></ul>
+            <span class="card__glare"></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THIRUKKURAL QUOTE ============ -->
+    <section class="quote">
+      <div class="quote__bg" aria-hidden="true">முறை</div>
+      <div class="container quote__inner">
+        <span class="quote__mark reveal" aria-hidden="true">“</span>
+        <p class="quote__tamil reveal" lang="ta">ஓர்ந்துகண் ணோடாது இறைபுரிந்து யார்மாட்டும்<br>தேர்ந்துசெய் வஃதே முறை</p>
+        <p class="quote__en" data-split>To examine with care, show favour to none, and act with impartiality — <em>that is justice.</em></p>
+        <p class="quote__src reveal">Thirukkural · 541</p>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS (horizontal scroll) ============ -->
+    <section class="process" id="process">
+      <div class="process__sticky">
+        <div class="process__track" id="processTrack">
+          <div class="process__intro">
+            <p class="eyebrow"><span class="eyebrow__line"></span>The Approach</p>
+            <h2 class="section-title">From first meeting to <em>final order.</em></h2>
+            <p>A clear, structured process — so you always know where your case stands.</p>
+            <div class="process__hint"><span>Scroll</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          </div>
+          <article class="step">
+            <span class="step__num">01</span>
+            <h3>Consultation</h3>
+            <p>A confidential conversation to understand the facts, your concerns and what you hope to achieve.</p>
+            <span class="step__line"></span>
+          </article>
+          <article class="step">
+            <span class="step__num">02</span>
+            <h3>Case Analysis</h3>
+            <p>Careful study of documents, precedents and the law to assess strengths, risks and realistic outcomes.</p>
+            <span class="step__line"></span>
+          </article>
+          <article class="step">
+            <span class="step__num">03</span>
+            <h3>Strategy &amp; Drafting</h3>
+            <p>A clear legal strategy and precisely drafted pleadings, notices and petitions — every word deliberate.</p>
+            <span class="step__line"></span>
+          </article>
+          <article class="step">
+            <span class="step__num">04</span>
+            <h3>Representation</h3>
+            <p>Diligent appearance and persuasive argument before the court, with regular updates at every stage.</p>
+            <span class="step__line"></span>
+          </article>
+          <article class="step">
+            <span class="step__num">05</span>
+            <h3>Resolution</h3>
+            <p>Pursuing the best achievable outcome — by judgment, settlement or mediation — and guiding what comes next.</p>
+            <span class="step__line"></span>
+          </article>
+        </div>
+        <div class="process__bar"><span id="processBar"></span></div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="section journey" id="journey">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal"><span class="eyebrow__line"></span>The Journey<span class="eyebrow__line"></span></p>
+          <h2 class="section-title" data-split>Milestones at <em>the Bar.</em></h2>
+        </div>
+        <div class="timeline" id="timeline">
+          <div class="timeline__line"><span id="timelineFill"></span></div>
+          <div class="tl-item reveal">
+            <div class="tl-item__dot"></div>
+            <div class="tl-item__card">
+              <span class="tl-item__year">2012</span>
+              <h3>Enrolled as an Advocate</h3>
+              <p>Enrolled with the Bar Council of Tamil Nadu &amp; Puducherry after completing a degree in law.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-item__dot"></div>
+            <div class="tl-item__card">
+              <span class="tl-item__year">2012 – 2016</span>
+              <h3>Trained Under Senior Counsel</h3>
+              <p>Built a foundation in civil and criminal trial practice, drafting and court craft in Chennai.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-item__dot"></div>
+            <div class="tl-item__card">
+              <span class="tl-item__year">2016</span>
+              <h3>Independent Chambers</h3>
+              <p>Established an independent practice serving individuals, families and businesses.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-item__dot"></div>
+            <div class="tl-item__card">
+              <span class="tl-item__year">2019</span>
+              <h3>High Court Practice</h3>
+              <p>Expanded into writ, appellate and revision matters before the High Court of Madras.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-item__dot"></div>
+            <div class="tl-item__card">
+              <span class="tl-item__year">Today</span>
+              <h3>Trusted Counsel</h3>
+              <p>A full-service practice across courts, tribunals and forums throughout Tamil Nadu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRINCIPLES (3D carousel) ============ -->
+    <section class="section principles" id="principles">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow reveal"><span class="eyebrow__line"></span>Core Principles<span class="eyebrow__line"></span></p>
+          <h2 class="section-title" data-split>Values that <em>never</em> go to recess.</h2>
+          <p class="section-head__lead reveal">Drag to explore</p>
+        </div>
+      </div>
+      <div class="stage" id="stage">
+        <div class="ring" id="ring">
+          <div class="ring__card"><span>I</span><h3>Integrity</h3><p>Honest advice — even when it is not what you hoped to hear.</p></div>
+          <div class="ring__card"><span>II</span><h3>Confidentiality</h3><p>What you share stays protected by privilege, always.</p></div>
+          <div class="ring__card"><span>III</span><h3>Diligence</h3><p>No hearing unprepared. No document unread.</p></div>
+          <div class="ring__card"><span>IV</span><h3>Clarity</h3><p>The law explained in plain language, in Tamil or English.</p></div>
+          <div class="ring__card"><span>V</span><h3>Accessibility</h3><p>Responsive communication and regular case updates.</p></div>
+          <div class="ring__card"><span>VI</span><h3>Advocacy</h3><p>Fearless representation of your rights before every forum.</p></div>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="courts reveal">
+          <li>High Court of Madras</li><li>District &amp; Sessions Courts</li><li>Family Courts</li><li>Consumer Commissions</li><li>Debts Recovery Tribunal</li><li>Arbitral Tribunals</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq">
+      <div class="container faq__grid">
+        <div class="faq__head">
+          <p class="eyebrow reveal"><span class="eyebrow__line"></span>Questions</p>
+          <h2 class="section-title" data-split>Before you <em>walk in.</em></h2>
+          <p class="reveal">Answers to what clients most often ask before their first consultation.</p>
+          <a href="#contact" class="btn btn--ghost magnetic reveal"><span>Ask Something Else</span></a>
+        </div>
+        <div class="accordion">
+          <div class="acc reveal">
+            <button class="acc__q" aria-expanded="false"><span>What should I bring to the first consultation?</span><i></i></button>
+            <div class="acc__a"><div><p>Bring copies of all documents related to your matter — agreements, notices, FIRs, court papers, title deeds or correspondence — along with a short timeline of events. The more complete the picture, the more precise the advice.</p></div></div>
+          </div>
+          <div class="acc reveal">
+            <button class="acc__q" aria-expanded="false"><span>Is what I share kept confidential?</span><i></i></button>
+            <div class="acc__a"><div><p>Yes. Communications between you and your advocate are protected by professional privilege under the Bharatiya Sakshya Adhiniyam, 2023 and the Bar Council's professional standards.</p></div></div>
+          </div>
+          <div class="acc reveal">
+            <button class="acc__q" aria-expanded="false"><span>Can consultations happen online?</span><i></i></button>
+            <div class="acc__a"><div><p>Yes. Consultations can be held in person at the chambers in Chennai or over a video call, depending on your convenience.</p></div></div>
+          </div>
+          <div class="acc reveal">
+            <button class="acc__q" aria-expanded="false"><span>How long will my case take?</span><i></i></button>
+            <div class="acc__a"><div><p>Timelines depend on the nature of the matter, the court and the conduct of the other side. You will receive a realistic estimate after the case analysis, along with regular updates as it progresses.</p></div></div>
+          </div>
+          <div class="acc reveal">
+            <button class="acc__q" aria-expanded="false"><span>Do you handle matters outside Chennai?</span><i></i></button>
+            <div class="acc__a"><div><p>Yes. Matters are handled before courts and tribunals across Tamil Nadu, in addition to the High Court of Madras and its Madurai Bench.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <p class="eyebrow reveal"><span class="eyebrow__line"></span>Get in Touch</p>
+          <h2 class="section-title" data-split>Let's discuss <em>your matter.</em></h2>
+          <p class="reveal">Share a brief description and you will receive a response within one working day to schedule a consultation.</p>
+
+          <div class="info-list">
+            <a class="info reveal" href="tel:+919751722792">
+              <span class="info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+              <span><small>Phone</small>+91 97517 22792</span>
+            </a>
+            <a class="info reveal" href="mailto:contact@advakilan.in">
+              <span class="info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+              <span><small>Email</small>contact@advakilan.in</span>
+            </a>
+            <div class="info reveal">
+              <span class="info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+              <span><small>Chambers</small>High Court Campus, Chennai – 600 104</span>
+            </div>
+            <div class="info reveal">
+              <span class="info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <span><small>Hours</small>Mon – Sat · 10:00 AM – 7:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="form reveal tilt" id="contactForm" data-tilt data-tilt-max="3" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <input type="text" id="fName" name="name" placeholder=" " required autocomplete="name">
+              <label for="fName">Full Name</label>
+              <span class="field__err">Please enter your name</span>
+            </div>
+            <div class="field">
+              <input type="tel" id="fPhone" name="phone" placeholder=" " required autocomplete="tel" pattern="[0-9+\s\-]{10,15}">
+              <label for="fPhone">Phone Number</label>
+              <span class="field__err">Enter a valid phone number</span>
+            </div>
+          </div>
+          <div class="field">
+            <input type="email" id="fEmail" name="email" placeholder=" " autocomplete="email">
+            <label for="fEmail">Email (optional)</label>
+            <span class="field__err">Enter a valid email</span>
+          </div>
+          <div class="field field--select">
+            <select id="fType" name="type" required>
+              <option value="" selected disabled>Choose one</option>
+              <option>Civil Litigation</option>
+              <option>Criminal Defence</option>
+              <option>Family &amp; Matrimonial</option>
+              <option>Property &amp; Real Estate</option>
+              <option>Corporate &amp; Commercial</option>
+              <option>Writs &amp; Consumer Matters</option>
+              <option>Other</option>
+            </select>
+            <label for="fType">Matter Type</label>
+            <span class="field__err">Please choose a matter type</span>
+          </div>
+          <div class="field">
+            <textarea id="fMsg" name="message" rows="4" placeholder=" " required></textarea>
+            <label for="fMsg">Brief description of your matter</label>
+            <span class="field__err">Please add a short description</span>
+          </div>
+          <label class="check">
+            <input type="checkbox" id="fAgree" required>
+            <span class="check__box"></span>
+            <span>I understand that submitting this form does not create an advocate–client relationship.</span>
+          </label>
+          <button type="submit" class="btn btn--primary btn--full magnetic" id="submitBtn">
+            <span>Request Consultation</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="#home" class="logo">
+          <span class="logo__mark">AK</span>
+          <span class="logo__text"><strong>Akilan</strong><small>Advocate &amp; Legal Counsel</small></span>
+        </a>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="#about">About</a><a href="#practice">Practice</a><a href="#process">Approach</a><a href="#journey">Journey</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="footer__giant" aria-hidden="true">Akilan</div>
+      <div class="footer__bottom">
+        <p>© <span id="year">2026</span> Akilan. All rights reserved.</p>
+        <p class="footer__note">This website is for information only and complies with the Bar Council of India rules. It does not constitute solicitation or legal advice.</p>
+        <a href="#home" class="to-top magnetic" aria-label="Back to top">
+          <svg class="to-top__ring" viewBox="0 0 50 50"><circle cx="25" cy="25" r="23"/><circle id="toTopProgress" cx="25" cy="25" r="23"/></svg>
+          <svg class="to-top__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp" href="https://wa.me/919751722792" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg>
+  </a>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5 9-10"/></svg></span>
+    <div><strong>Request received</strong><p>Thank you — you will be contacted within one working day.</p></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
