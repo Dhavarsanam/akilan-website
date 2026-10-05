@@ -562,12 +562,6 @@ body.loaded .hero__chip { opacity: 1; }
   transition: transform 1.2s var(--ease), filter 0.8s;
 }
 .portrait:hover .portrait__photo { transform: translateX(-50%) scale(1.08); filter: contrast(1.06) saturate(1.1) drop-shadow(0 0 30px rgba(212, 174, 98, 0.3)); }
-.portrait__mono {
-  position: absolute; top: 14%; left: 50%; transform: translateX(-50%);
-  font-family: var(--serif); font-size: clamp(5rem, 12vw, 9rem); font-weight: 600; line-height: 1;
-  color: transparent; -webkit-text-stroke: 1px rgba(212, 174, 98, 0.22);
-  z-index: -0;
-}
 .portrait__shine {
   position: absolute; inset: 0; z-index: 3; pointer-events: none;
   background: radial-gradient(circle at var(--mx) var(--my), rgba(255, 235, 190, 0.18), transparent 45%);
@@ -763,7 +757,7 @@ a.info:hover { border-color: var(--line); background: var(--surface); transform:
 .info__icon { flex: 0 0 auto; width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; color: var(--gold); border: 1px solid var(--line-strong); }
 .info__icon svg { width: 20px; }
 .info small { display: block; font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); line-height: 1.4; }
-.info > span:last-child { color: var(--ivory); font-size: 0.98rem; line-height: 1.5; }
+.info > span:last-child { min-width: 0; color: var(--ivory); font-size: 0.98rem; line-height: 1.5; overflow-wrap: anywhere; }
 
 .form {
   position: relative;
